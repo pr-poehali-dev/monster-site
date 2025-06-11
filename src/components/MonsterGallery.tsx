@@ -10,63 +10,107 @@ const MonsterGallery = () => {
         "Древнее существо, питающееся страхами и кошмарами людей. Может материализоваться из любой тени.",
       abilities: ["Невидимость", "Телепортация", "Контроль тьмы"],
       image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=300&fit=crop",
       stats: { strength: 95, speed: 88, intelligence: 92 },
-    },
-    {
-      name: "Лесной Страж",
-      type: "Природный Дух",
-      danger: "medium" as const,
-      description:
-        "Защитник древнего леса, обладающий способностью управлять растениями и животными.",
-      abilities: ["Контроль природы", "Исцеление", "Камуфляж"],
-      image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-      stats: { strength: 75, speed: 60, intelligence: 85 },
     },
     {
       name: "Кровавый Вампир",
       type: "Нежить",
-      danger: "high" as const,
+      danger: "extreme" as const,
       description:
         "Элегантный и смертоносный вампир, охотящийся на людей в темных переулках города.",
       abilities: ["Регенерация", "Гипноз", "Превращение в летучую мышь"],
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
       stats: { strength: 85, speed: 90, intelligence: 88 },
     },
     {
-      name: "Огненный Дракон",
-      type: "Дракон",
-      danger: "extreme" as const,
-      description:
-        "Могучий дракон с огненным дыханием, способный уничтожить целые города.",
-      abilities: ["Огненное дыхание", "Полет", "Магическая защита"],
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      stats: { strength: 98, speed: 75, intelligence: 90 },
-    },
-    {
-      name: "Ледяной Голем",
-      type: "Элементаль",
+      name: "Зомби-Орда",
+      type: "Нежить",
       danger: "high" as const,
       description:
-        "Создание из льда и снега, способное заморозить все живое одним прикосновением.",
-      abilities: ["Заморозка", "Ледяная броня", "Снежная буря"],
+        "Восставший из мертвых, жаждущий человеческой плоти. Распространяет заразу среди живых.",
+      abilities: ["Заражение", "Невосприимчивость к боли", "Групповая атака"],
       image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-      stats: { strength: 90, speed: 45, intelligence: 60 },
+        "https://images.unsplash.com/photo-1509248961158-d3f6d7e8f7f6?w=400&h=300&fit=crop",
+      stats: { strength: 70, speed: 45, intelligence: 30 },
     },
     {
-      name: "Призрачный Рыцарь",
+      name: "Оборотень",
+      type: "Ликантроп",
+      danger: "high" as const,
+      description:
+        "Человек-волк, превращающийся в чудовище в полнолуние. Обладает звериными инстинктами.",
+      abilities: ["Превращение", "Острые когти", "Ночное зрение"],
+      image:
+        "https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=300&fit=crop",
+      stats: { strength: 88, speed: 92, intelligence: 65 },
+    },
+    {
+      name: "Призрак Замка",
       type: "Призрак",
       danger: "medium" as const,
       description:
-        "Дух павшего воина, обреченный вечно охранять свою гробницу.",
-      abilities: ["Нематериальность", "Проклятие", "Духовная атака"],
+        "Беспокойная душа, привязанная к старинному замку. Наводит ужас на всех живых.",
+      abilities: ["Нематериальность", "Левитация", "Духовное воздействие"],
+      image:
+        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+      stats: { strength: 60, speed: 80, intelligence: 85 },
+    },
+    {
+      name: "Демон Бездны",
+      type: "Демон",
+      danger: "extreme" as const,
+      description:
+        "Порождение адского пламени, способное поглощать души грешников.",
+      abilities: ["Огненная магия", "Портал в ад", "Проклятия"],
       image:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      stats: { strength: 70, speed: 65, intelligence: 75 },
+      stats: { strength: 95, speed: 75, intelligence: 90 },
+    },
+    {
+      name: "Скелет-Воин",
+      type: "Нежить",
+      danger: "medium" as const,
+      description:
+        "Костяной воин, поднятый темной магией. Сражается с мечом и щитом.",
+      abilities: ["Неутомимость", "Сопротивление магии", "Воскрешение"],
+      image:
+        "https://images.unsplash.com/photo-1542736705-53f0131d1e98?w=400&h=300&fit=crop",
+      stats: { strength: 75, speed: 55, intelligence: 45 },
+    },
+    {
+      name: "Ведьма Болот",
+      type: "Ведьма",
+      danger: "high" as const,
+      description:
+        "Старая ведьма, живущая в глубинах болот. Варит зелья и насылает проклятья.",
+      abilities: ["Темная магия", "Зельеварение", "Проклятия"],
+      image:
+        "https://images.unsplash.com/photo-1509248961158-d3f6d7e8f7f6?w=400&h=300&fit=crop",
+      stats: { strength: 50, speed: 60, intelligence: 95 },
+    },
+    {
+      name: "Чупакабра",
+      type: "Криптид",
+      danger: "high" as const,
+      description:
+        "Загадочное существо, высасывающее кровь из домашних животных в ночи.",
+      abilities: ["Высасывание крови", "Прыжки", "Маскировка"],
+      image:
+        "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=300&fit=crop",
+      stats: { strength: 70, speed: 88, intelligence: 55 },
+    },
+    {
+      name: "Мумия Фараона",
+      type: "Нежить",
+      danger: "high" as const,
+      description:
+        "Древний правитель, восставший из саркофага. Владеет магией песков.",
+      abilities: ["Песчаная буря", "Древние проклятия", "Регенерация"],
+      image:
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      stats: { strength: 80, speed: 40, intelligence: 88 },
     },
   ];
 

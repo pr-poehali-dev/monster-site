@@ -4,8 +4,26 @@ import Icon from "@/components/ui/icon";
 const MonsterHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900 overflow-hidden">
+      {/* Background monster image */}
+      <div className="absolute inset-0 opacity-20">
+        <img
+          src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=1200&h=800&fit=crop"
+          alt="Scary monster"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-purple-900/10 to-gray-900/20 opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/60 via-purple-900/50 to-gray-900/60"></div>
+
+      {/* Hero monster image */}
+      <div className="absolute right-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
+        <img
+          src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop"
+          alt="Main monster"
+          className="w-80 h-96 object-cover rounded-xl opacity-80 monster-hover floating"
+        />
+      </div>
 
       {/* Floating elements */}
       <div className="absolute top-20 left-10 floating">
